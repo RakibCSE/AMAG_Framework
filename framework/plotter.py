@@ -4,10 +4,13 @@ import matplotlib.pyplot as plt
 class Plotter:
     @staticmethod
     def plot(segments):
-        """_summary_
+        """Plot the filtered segments
 
         Args:
-            segments (_type_): _description_
+            segments (list): List of segments
+
+        Returns:
+            None
         """
         plt.figure(figsize=(10, 6))
         plt.xlabel("Longitude (x)")
@@ -17,6 +20,6 @@ class Plotter:
             plt.plot(
                 segment[:, 3],
                 segment[:, 2],
-            )  # Column 2 is latitude (y) and Column 3 in longitude (x)
+            )  # Column 3 is longitude (x) and Column 2 in latitude (y)
 
         plt.show()
