@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 class Plotter:
     @staticmethod
-    def plot(segments):
+    def plot(segments: list) -> None:
         """Plot the filtered segments
 
         Args:
@@ -17,9 +17,10 @@ class Plotter:
         plt.ylabel("Latitude (y)")
 
         for segment in segments:
+            # Plot longitude (x, column 3) and  latitude (y, column 2)
             plt.plot(
                 segment[:, 3],
                 segment[:, 2],
-            )  # Column 3 is longitude (x) and Column 2 in latitude (y)
+            )
 
         plt.show()
