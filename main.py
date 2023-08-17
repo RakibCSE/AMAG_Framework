@@ -12,11 +12,10 @@ if __name__ == "__main__":
     # Get data for specific Id
     id_data = obj.get_data_by_id(4)
 
-    
     filtered_segments = obj.filter(filter_func=length_filter)
 
     # Create a Plotter instance
     plotter = Plotter()
 
     # Plot the filtered segments
-    plotter.plot(filtered_segments[:50])
+    plotter.plot(filtered_segments)
