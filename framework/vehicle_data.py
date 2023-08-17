@@ -18,7 +18,7 @@ class VehicleData:
         return filtered_data
 
     def filter(self, filter_func=None):
-        """Filters the data segments by filter function
+        """Filters the data segments by custom function
 
         Args:
             filter_func (callable, optional): Function that takes segment as argument.
