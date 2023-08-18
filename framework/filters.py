@@ -1,2 +1,2 @@
-def length_filter(segments: list) -> bool:
-    return len(segments) > 10
+def length_filter(segment: list) -> bool:
+    return len(segment) > 10
