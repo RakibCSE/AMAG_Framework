@@ -4,7 +4,7 @@ from framework.plotter import Plotter
 
 
 class TestPlotter(CommonTest):
-    def test_plot(self) -> None:
+    def test_plot_segments(self) -> None:
         obj = VehicleData(self.data_path)
         plotter = Plotter()
 
@@ -12,4 +12,4 @@ class TestPlotter(CommonTest):
         filtered_segments = obj.filter(lambda segment: len(segment) > 1)
 
         # Test plot function
-        plotter.plot(filtered_segments)
+        plotter.plot_segments(filtered_segments)
