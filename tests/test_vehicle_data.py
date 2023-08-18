@@ -17,11 +17,11 @@ class TestVehicleData(CommonTest):
 
     def test_filter(self) -> None:
         obj = VehicleData(self.data_path)
-        segments = obj.filter(filter_func=length_filter)
+        filtered_segments = obj.filter(filter_func=length_filter)
 
         # Check if all the segments length condition
-        for segment in segments:
+        for segment in filtered_segments:
             self.assertTrue(length_filter(segment))
 
         # Check the number of segments in correct
-        self.assertEqual(len(segments), 3)
+        self.assertEqual(len(filtered_segments), 3)
