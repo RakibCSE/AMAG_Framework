@@ -18,4 +18,4 @@ if __name__ == "__main__":
     plotter = Plotter()
 
     # Plot the filtered segments
-    plotter.plot(filtered_segments)
+    plotter.plot_segments(filtered_segments)
