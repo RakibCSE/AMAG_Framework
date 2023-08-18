@@ -33,13 +33,13 @@ class VehicleData:
         if filter_func is None:
             return self.data
 
-        segments = []
+        filtered_segments = []
 
         for _id in np.unique(self.data[:, 1]):
             segment = self.get_data_by_id(_id)
 
             # Check the segment length
             if filter_func(segment):
-                segments.append(segment)
+                filtered_segments.append(segment)
 
-        return segments
+        return filtered_segments
