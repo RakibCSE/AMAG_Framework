@@ -3,24 +3,24 @@ import matplotlib.pyplot as plt
 
 class Plotter:
     @staticmethod
-    def plot(segments: list) -> None:
+    def plot_segments(filtered_segments: list) -> None:
         """Plot the filtered segments
 
         Args:
-            segments (list): List of segments
+            filtered_segments (list): List of filtered segments
 
         Returns:
             None
         """
         plt.figure(figsize=(10, 6))
-        plt.xlabel("Longitude (x)")
-        plt.ylabel("Latitude (y)")
+        plt.xlabel("Latitude (x)")
+        plt.ylabel("Longitude (y)")
 
-        for segment in segments:
-            # Plot longitude (x, column 3) and  latitude (y, column 2)
+        for segment in filtered_segments:
+            # Plot latitude (x, column 2) and  longitude (y, column 3)
             plt.plot(
-                segment[:, 3],
                 segment[:, 2],
+                segment[:, 3],
             )
 
         plt.show()
